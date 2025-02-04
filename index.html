@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de la Epidemiología</title>
+</head>
+<body>
+    <h1>Breve Historia de la Epidemiología</h1>
+    <p>La epidemiología es la disciplina que estudia la distribución y determinantes de las enfermedades en las poblaciones. 
+       Sus orígenes se remontan a la antigua Grecia, pero fue en el siglo XIX cuando John Snow demostró su utilidad al 
+       identificar el agua contaminada como la causa del brote de cólera en Londres.</p>
+    
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/John_Snow.jpg" alt="John Snow, pionero de la epidemiología" width="300">
+    
+    <h2>Calculadora de Media</h2>
+    <p>Ingresa números separados por comas para calcular la media:</p>
+    <input type="text" id="numeros" placeholder="Ejemplo: 5,10,15">
+    <button onclick="calcularMedia()">Calcular</button>
+    <p>Resultado: <span id="resultado"></span></p>
+    
+    <script>
+        function calcularMedia() {
+            let input = document.getElementById("numeros").value;
+            let numeros = input.split(",").map(Number);
+            let suma = numeros.reduce((acc, num) => acc + num, 0);
+            let media = suma / numeros.length;
+            document.getElementById("resultado").innerText = isNaN(media) ? "Entrada no válida" : media.toFixed(2);
+        }
+    </script>
+    
+    <h2>Enlaces de Interés</h2>
+    <ul>
+        <li><a href="https://www.who.int/es" target="_blank">Organización Mundial de la Salud</a></li>
+        <li><a href="https://www.cdc.gov" target="_blank">Centros para el Control y la Prevención de Enfermedades</a></li>
+    </ul>
+</body>
+</html>
